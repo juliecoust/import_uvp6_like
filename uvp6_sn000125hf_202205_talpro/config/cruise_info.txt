@@ -1,0 +1,12 @@
+[General]
+acron=talpro
+cs_email=katrin.schroeder@ismar.cnr.it
+cs_name=Karine Schroeder
+description=TALPRO
+do_email=laurent.coppola@imev-mer.fr
+do_name=Laurent Coppola
+gen_info=
+op_email=anthony.bosse@mio.osupytheas.fr
+op_name=Anthony Bosse
+sn=000125HF
+year=202205

@@ -1,0 +1,103 @@
+// Hardware configuration parameters :
+
+// Parameter name: Camera_ref, String type, length range: 1 to 15 characters
+// Description: OCTOPUS serial number
+Camera_ref = 000125HF
+
+// Parameter name: Acquisition_mode, Integer type, range: 0 to 2
+// Description: 0: SUPERVISED mode, 1: AUTONOMOUS mode, 2: TIME-programmed mode
+Acquisition_mode = 1
+
+// Parameter name: Default_acquisition_configuration, String type, length range: 1 to 15 characters
+// Description: Name of the acquisition configuration automatically launched when Acquisition_mode = 1 (AUTONOMOUS)
+Default_acquisition_configuration = ACQ_CTD
+
+// Parameter name: Delay_after_power_up_on_time_mode, Integer type, range: 0 to 65535
+// Description: Delay before starting image acquisition when Acquisition_mode = 1 (AUTONOMOUS) - Unit: minutes
+Delay_after_power_up_on_time_mode = 0
+
+// Parameter name: Light_ref, String type, length range: 1 to 15 characters
+// Description: Light unit serial number
+Light_ref = 000009VE2
+
+// Parameter name: Correction_table_activation, Integer type, range: 0 to 2
+// Description: Selection of the lighting correction LUT -> 0: no correction, 1: vertical light unit, 2: horizontal light unit
+Correction_table_activation = 1
+
+// Parameter name: Time_between_lighting_power_up_and_trigger, Integer type, range: 0 to 1000
+// Description: Delay between light unit powering and trigger - Unit: µs
+Time_between_lighting_power_up_and_trigger = 0
+
+// Parameter name: Time_between_lighting_trigger_and_acquisition, Integer type, range: 0 to 1000
+// Description: Delay between light unit trigger and image sensor shutter - Unit: µs
+Time_between_lighting_trigger_and_acquisition = 250
+
+// Parameter name: Pressure_sensor_ref, String type, length range: 0 to 15 characters
+// Description: Pressure sensor serial number (let it empty if no sensor installed)
+Pressure_sensor_ref = 216149
+
+// Parameter name: Pressure_offset, Float type, range: -999 to 999
+// Description: Distance between the image plan and the pressure measurement point (if undefined, set 999) - Unit: m
+// !!!! Attention: if value is >= 0.0 and <= 100.0, temporarily used as maximum activity ratio for over exposition detection !!!!
+Pressure_offset = 0.600
+
+// Parameter name: Storage_capacity, Internal integer type, do not edit
+// Description: SD card storage capacity, automatically updated by OCTOPUS when parameters are modified, do not edit - Unit: MBytes
+Storage_capacity = 393773
+
+// Parameter name: Minimum_remaining_memory_for_thumbnail_saving, Integer type, range: 0 to 65535
+// Description: Minimal memory remaining in the SD card to keep saving images or vignettes - Unit: MBytes
+Minimum_remaining_memory_for_thumbnail_saving = 20000
+
+// Parameter name: Baud_Rate, Integer type, range: 0 to 2
+// Description: OCTOPUS RS232 speed selection -> 0: 9600 bauds, 1: 19200 bauds, 2: 38400 bauds
+Baud_Rate = 2
+
+// Parameter name: IP_adress, String type, length range: 7 to 15 characters
+// Description: OCTOPUS IP address for Ethernet communication
+IP_adress = 193.49.112.100
+
+// Parameter name: Black_level, Integer type, range: 0 to 4095
+// Description: Image sensor black level parameter - Unit: gray level(12bits)
+Black_level = 0
+
+// Parameter name: Shutter, Integer type, range: 14 to 60000000
+// Description: Image sensor integration time (shutter) - Unit: µs
+Shutter = 75
+
+// Parameter name: Gain, Integer type, range: 0 to 48
+// Description: Image sensor gain - Unit: dB
+Gain = 6
+
+// Parameter name: Threshold, Integer type, range: 0 to 255
+// Description: Threshold for image segmentation (pixels <= Threshold are considered background) - Unit: gray level(8bits)
+Threshold = 22
+
+// Parameter name: Aa, Float type, range: 0 to 1e+06
+// Description: Calibration parameter (corresponding area in the scene represented by each pixel) - Unit: (µm^2)/pixel)
+Aa = 2300.000
+
+// Parameter name: Exp, Float type, range: 0 to 2
+// Description: Calibration parameter (adjusting for specular reflections). If Aa and Exp= 0.0, values are kept in pixels
+Exp = 1.136
+
+// Parameter name: Pixel_Size, Integer type, range: 0 to 1000
+// Description: Uncalibrated pixel size in the scene, for reference only - Unit: µm
+Pixel_Size = 73
+
+// Parameter name: Image_volume, Float type, range: 0 to 10
+// Description: Image volume (if = 0.0, particle concentrations are given in #/image, else in #/10L) - Unit: L
+Image_volume = 0.710
+
+// Parameter name: Calibration_date, String type, length range: 1 to 15 characters
+// Description: Calibration date for the values in this table
+Calibration_date = 20220505
+
+// Parameter name: Last_parameters_modification, Internal string type, do not edit
+// Description: YYYYMMDDHHMM, automatically updated by OCTOPUS when hardware parameters are modified, do not edit
+Last_parameters_modification = 202205091425
+
+// Parameter name: Operator_email, String type, length range: 1 to 63 characters
+// Description: Identification of the operator filling this configuration table
+Operator_email = camille.catalano@imev-mer.fr
+

@@ -1,0 +1,82 @@
+// Acquisition configuration parameters :
+
+// Parameter name: Configuration_name, String type, length range: 1 to 15 characters
+// Description: Name used to launch this configuration ($start:CONFNAME)
+Configuration_name = ACQ_CTD
+
+// Parameter name: PT_mode, Integer type, range: 0 to 3
+// Description: 0: Triggered by vector, 1: Asks for pressure and time, 2: Use OCTOPUS pressure sensor, 3: CTD mode
+PT_mode = 3
+
+// Parameter name: Acquisition_frequency, Float type, range: 0.001 to 50
+// Description: Acquisition frequency (maximum value) - Unit: Hz
+Acquisition_frequency = 25.000
+
+// Parameter name: Frames_per_bloc, Integer type, range: 1 to 255
+// Description: Nb of images to accumulate and synthesize histograms before sending each result - Unit: frames
+Frames_per_bloc = 10
+
+// Parameter name: Blocs_per_PT, Integer type, range: 1 to 255
+// Description: Nb of blocs to acquire before acquiring or asking for a new pressure information - Unit: blocs
+Blocs_per_PT = 1
+
+// Parameter name: Pressure_for_auto_start, Integer type, range: 0 to 6000
+// Description: When in CTD mode (PT_mode= 3), pressure value to automatically start the acquisition - Unit: mH20
+Pressure_for_auto_start = 10
+
+// Parameter name: Pressure_difference_for_auto_stop, Integer type, range: 0 to 6000
+// Description: When in CTD mode (PT_mode= 3), pressure drop from deepest value to automatically stop the acquisition - Unit: mH20
+Pressure_difference_for_auto_stop = 30
+
+// Parameter name: Result_sending, Boolean type, range: [0;1] or [false;true]
+// Description: 0/false: results are never sent - 1/true: synthesized results are sent through RS232 after each bloc
+Result_sending = false
+
+// Parameter name: Save_synthetic_data_for_delayed_request, Boolean type, range: [0;1] or [false;true]
+// Description: 0/false: do not save - 1/true: save synthetic data for a potential delayed request
+Save_synthetic_data_for_delayed_request = false
+
+// Parameter name: Limit_lpm_detection_size, Integer type, range: 0 to 65535
+// Description: Minimum size (ESD) to count and analyze objects - Unit: µm(ESD)
+Limit_lpm_detection_size = 10
+
+// Parameter name: Save_images, Integer type, range: 0 to 2
+// Description: How to save Images -> 0: don't save, 1: save whole raw image, 2: save vignettes only
+Save_images = 2
+
+// Parameter name: Vignetting_lower_limit_size, Integer type, range: 0 to 65535
+// Description: When saving vignettes (Save_images= 2), minimum object size (ESD) to save - Unit: µm(ESD)
+Vignetting_lower_limit_size = 620
+
+// Parameter name: Appendices_ratio, Float type, range: 1 to 3
+// Description: When saving vignettes (Save_images= 2), vignette size to actual object size ratio
+Appendices_ratio = 1.500
+
+// Parameter name: Interval_for_measuring_background_noise, Integer type, range: 0 to 255
+// Description: Blocs between background noise measures (bloc acquired without flashing). Disabled if zero - Unit: blocs
+Interval_for_measuring_background_noise = 10
+
+// Parameter name: Image_nb_for_smoothing, Integer type, range: 1 to 20
+// Description: Nb of images to smooth temperature and number of objects signals (analog output and security stop) - Unit: frames
+Image_nb_for_smoothing = 10
+
+// Parameter name: Analog_output_activation, Boolean type, range: [0;1] or [false;true]
+// Description: 0/false: analog output disabled - 1/true: analog output is updated at each image
+Analog_output_activation = true
+
+// Parameter name: Gain_for_analog_out, Integer type, range: 1 to 65535
+// Description: Smoothed number of objects for maximum analog output value (5 Volts) - Unit: objects
+Gain_for_analog_out = 5000
+
+// Parameter name: Minimum_object_number, Integer type, range: 0 to 65535
+// Description: Smoothed minimum number of objects to cause a security stop - Unit: objects
+Minimum_object_number = 0
+
+// Parameter name: Maximal_internal_temperature, Integer type, range: 0 to 255
+// Description: Smoothed maximum temperature to cause a security stop - Unit: Celsius
+Maximal_internal_temperature = 60
+
+// Parameter name: Operator_email, String type, length range: 1 to 63 characters
+// Description: Identification of the operator filling this configuration table
+Operator_email = camille.catalano@imev-mer.fr
+
