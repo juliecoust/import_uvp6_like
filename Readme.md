@@ -78,8 +78,8 @@ filename=20220518-034504
 profileid=01
 bottomdepth=nan
 ctdrosettefilename=ctd01
-latitude=43�48 08
-longitude=009�30 37
+latitude=43°48 08
+longitude=009°30 37
 firstimage=11209
 dn=
 winddir=nan
@@ -176,7 +176,7 @@ ACQ_CONF,ACQ_CTD,3,25.000,10,1,10,30,0,0,10,2,620,1.5,10,10,1,5000,0,60,camille.
 We extract max pressure at import time. and store this file as it is.
 
 ### meta/\*header*.txt content
-File content : one entete line then on data line by sample (profileid)
+File content : header then on data line by sample (profileid)
 ``` 
 cruise;ship;filename;profileid;bottomdepth;ctdrosettefilename;latitude;longitude;firstimage;volimage;aa;exp;dn;winddir;windspeed;seastate;nebuloussness;comment;endimg;yoyo;stationid;sampletype;integrationtime;argoid;pixelsize;sampledatetime;constantdepth
 TALPRO;RV Belgica II;20220518-034504;01;nan;ctd01;43�48 08;009�30 37;11209;0.710;0.0023;1.136;;nan;nan;nan;nan;;27940;;CTD01;P;nan;;73;20220518-042127-284;
