@@ -174,6 +174,15 @@ ACQ_CONF,ACQ_CTD,3,25.000,10,1,10,30,0,0,10,2,620,1.5,10,10,1,5000,0,60,camille.
 `````
 
 We extract max pressure at import time. and store this file as it is.
+You do not need the first two lines, we we only read lines starting by dates (exemple : 20220518-042128-391)
+
+#### There are 3 types of data lines that you could be interested in
+
+- The data lines from “OVER-EXPOSED” images (saturation by sun light (in water or on deck) or turbid waters) : 20210428-134956-1,-0.05,21.38,1:**OVER_EXPOSED**,22.2%;
+![alt text](image-2.png)
+- The “BLACK” data lines acquired  with no light (to measure the noise, instrumental or environmental) : 20210428-143248,94.65,16.06,**0**:1,5056,30.9,11.6;2,145,31.4,10.5;3,2,28.3,7.2;
+- The LPM data lines acquired with the light : 20210428_3250,94.18,16.00,**1**:1,5809,30.5,11.2;2,369,36.0,16.7;3,87,40.6,21.1;4,46,52.4,29.1;5,11,54.8,31.4;6,11,58.4,37.5;7,5,49.5,31.9;8,5,72.2,44.9;9,2,85.0,45.3;10,3,87.1,53.1;11,1,57.7,20.5;12,2,80.2,51.5;25,1,79.7,45.9;
+![alt text](image-1.png)
 
 ### meta/\*header*.txt content
 File content : header then on data line by sample (profileid)
